@@ -18,3 +18,12 @@ let num = prompt("enter the value : ");
     }
 
 3. *USER INPUT ODD TABLE*
+
+    let num = prompt("enter the value : ");
+
+    for(let i = 1; i<=10; i++){
+        if(i % 2 == 0){
+               continue;
+     }
+     console.log(`${num} * ${i} = ${i*num} `);
+    }
