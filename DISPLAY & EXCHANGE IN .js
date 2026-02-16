@@ -22,17 +22,28 @@ do {
     if (choice == 1) {
 
         let searchValue = parseInt(prompt("Enter value to search:"));
-        let positions = [];
+        let found = false;
 
         for (let i = 0; i < arr.length; i++) {
+
             if (arr[i] === searchValue) {
-                positions.push(i + 1);
+
+                found = true;
+
+                let before = (i > 0) ? arr[i - 1] : "No Before Value";
+                let after = (i < arr.length - 1) ? arr[i + 1] : "No After Value";
+
+                alert(
+                    "Value Found!\n\n" +
+                    "Position: " + (i + 1) + "\n" +
+                    "Before Value: " + before + "\n" +
+                    "Current Value: " + arr[i] + "\n" +
+                    "After Value: " + after
+                );
             }
         }
 
-        if (positions.length > 0) {
-            alert("Value found at positions: " + positions.join(", "));
-        } else {
+        if (!found) {
             alert("Value not found");
         }
     }
