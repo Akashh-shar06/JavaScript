@@ -100,5 +100,5 @@
 
 
 
-What is Framework - React, Angular, Vue.js
+What is Framework - React, Angular, Vue
 what is tailwind in css 
